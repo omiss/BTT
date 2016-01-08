@@ -8,27 +8,40 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-
-    <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <script src="cordova.js"></script>
 
-    <!-- your app's js -->
+    <!-- // init -->
     <script src="js/app.js"></script>
-  </head>
-  <body ng-app="starter">
+    <script src="js/routing.js"></script>
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
+    <!-- // controllers -->
+
+    <!-- // services -->
+  </head>
+  <body ng-app="BTT">
+  <ion-header-bar align-title="left" class="bar-positive">
+    <h1 class="title"><strong>BTT</strong></h1>
+    <div class="buttons">
+      <a href="#" class="button" ng-hide="user"><i class="ionicons ion-android-unlock"></i> Connexion</a>
+      <a href="#" class="button" ng-hide="!user"><i class="ionicons ion-android-person"></i> {{ user.username }}</a>
+    </div>
+  </ion-header-bar>
+
+  <ion-nav-view>
+  </ion-nav-view>
+
+  <ion-footer-bar align-title="left" class="bar-positive tabs tabs-icon-only">
+    <a href="#" class="tab-item">
+      <i class="icon ion-home"></i>
+    </a>
+    <a href="#/" class="tab-item">
+      <i class="icon ion-android-map"></i>
+    </a>
+    <a href="#/" class="tab-item" ng-click="clearItem()">
+      <i class="icon ion-navicon-round"></i>
+    </a>
+  </ion-footer-bar>
   </body>
 </html>
