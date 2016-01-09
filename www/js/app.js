@@ -18,6 +18,7 @@ angular.module('starter', ['ionic'])
       cordova.plugins.Keyboard.disableScroll(true);
     }
     if(window.StatusBar) {
+      dfhcgh
       StatusBar.styleDefault();
     }
   });
